@@ -1,0 +1,54 @@
+details summary {
+  list-style: none; 
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::after {
+  content: ""; 
+}
+
+.faq svg {
+  cursor: pointer;
+  width: 30px;
+}
+
+.faq {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto; 
+  padding: 20px;
+}
+
+.faq details {
+  margin-bottom: 15px; 
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.faq details summary {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.faq details summary svg {
+  transition: transform 0.3s ease;
+  float: right;
+}
+
+.faq details[open] summary svg {
+  transform: rotate(180deg);
+}
+
+.faq details p {
+  font-size: 16px;
+  margin-left: 10px;
+  color: #555;
+}
