@@ -1,10 +1,11 @@
-import {Oswald} from "next/font/google";
+import {Cormorant_Garamond} from "next/font/google";
 import "./globals.css"
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 
-const font = Oswald({
-  subsets: ["latin"]
+const font = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 })
 
 export const metadata = {

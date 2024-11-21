@@ -1,6 +1,5 @@
 import CTA from "@/components/call-to-action";
-import Footer from "@/components/footer";
-import Header from "@/components/header";
+import StartShopping from "@/components/start-shopping";
 import { createClient } from "@/utils/supabase/server";
 
 export default async function Home() {
@@ -12,7 +11,8 @@ const supabase = await createClient();
   console.log("data",data);
 
   return (
-   <div className="homepage">
+   <div className="homepage"> 
+   <StartShopping />
       {data?.map((x, i) => (
         <div className="stores" key={i}>
           <p>{x.name}</p>

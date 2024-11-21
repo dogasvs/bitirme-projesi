@@ -1,0 +1,13 @@
+.startShopping {
+  background-image: url("/images/jewelry.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
+}
+
+.startShopping h3 {
+  font-size: 60px;
+  padding: 200px 50px;
+  color: #efeddc;
+}

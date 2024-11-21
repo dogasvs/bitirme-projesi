@@ -1,6 +1,6 @@
 .headerContainer {
   box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 8px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  padding: 10px 30px;
+  padding-inline: 30px;
   position: sticky;
   top: 0;
   display: flex;

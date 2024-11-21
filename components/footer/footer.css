@@ -1,6 +1,8 @@
 .footer li {
   list-style: none;
   margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .footer a {
@@ -36,6 +38,7 @@
 .footerBrand p {
   color: #d7d4bf;
   margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .footerLogo {
