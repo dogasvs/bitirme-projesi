@@ -1,0 +1,65 @@
+.footer li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #d7d4bf;
+  transition: opacity .3s ease;
+}
+
+.footer a:hover {
+  opacity: .2;
+}
+
+.footer strong {
+  font-size: 19px;
+}
+
+.ıtem ul, li, h1 {
+  color: #d7d4bf;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+  background-color: #644524;
+}
+
+.footerBrand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerBrand p {
+  color: #d7d4bf;
+  margin-bottom: 20px;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ıtemm li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.socialMedia {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.socialMedia svg {
+  width: 25px;
+  transition: opacity .3s ease;
+}
+.socialMedia svg:hover {
+  opacity: .5;
+}

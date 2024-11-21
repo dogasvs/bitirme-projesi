@@ -1,0 +1,13 @@
+.about {
+  padding: 40px 100px;
+}
+
+.about p {
+  margin-bottom: 16px; 
+  font-size: 18px;
+  color: #252627;
+}
+
+.about h1 {
+  margin-bottom: 16px; 
+}

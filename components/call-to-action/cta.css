@@ -1,0 +1,30 @@
+.actionContainer {
+  background-image: url("/images/magaza.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+  justify-content: center;
+}  
+
+.actionContainer h1 {
+  color: #effbf4;
+  font-size: 50px;
+}
+
+.actionContainer a {
+  text-decoration: none;
+  background-color: #f5e9d6;
+  color: black;
+  padding: 14px 40px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.actionContainer a:hover {
+  background-color: #7a663b;
+  color: #f5e9d6;
+}
