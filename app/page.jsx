@@ -13,14 +13,12 @@ const supabase = await createClient();
 
   return (
    <div className="homepage">
-      <Header />
       {data?.map((x, i) => (
         <div className="stores" key={i}>
           <p>{x.name}</p>
         </div>
       ))}
       <CTA />
-      <Footer />
    </div>
   );
 }

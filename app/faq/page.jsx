@@ -1,12 +1,10 @@
 import Footer from "@/components/footer";
-import Header from "@/components/header";
 import "./faq.css"
 import DiamondSvg from "@/svgs/diamond";
 
 export default function FAQ() {
   return (
     <div className="faqContainer">
-      <Header />
       <div className="faq">
         <details>
           <summary>Siparişimi nasıl takip edebilirim?  <DiamondSvg /></summary>
@@ -43,7 +41,6 @@ export default function FAQ() {
           <p>Bizimle iletişim sayfamız üzerinden ya da mağazalarımızı ziyaret ederek kolayca iletişime geçebilirsiniz.</p>
         </details>
       </div>
-      <Footer />
     </div>
   )
 }

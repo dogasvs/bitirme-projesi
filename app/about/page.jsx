@@ -1,11 +1,9 @@
 import Footer from "@/components/footer";
-import Header from "@/components/header";
 import "./about.css"
 
 export default function AboutPage() {
   return (
     <div className="aboutPageContainer">
-      <Header />
       <div className="about">
         <h1>HAKKIMIZDA</h1>
         <p>
@@ -18,7 +16,6 @@ export default function AboutPage() {
           Müşterilerimizin memnuniyeti, bizim için her zaman birinci öncelik oldu. Takılarımız sadece birer ürün değil; onları takan herkesin kimliğini, ruhunu ve hikayesini yansıtan birer sanat eseri. Sizlere sunduğumuz her tasarım, en ince ayrıntısına kadar özenle hazırlanır ve kalite standartlarımızdan ödün verilmez.✨
         </p>
       </div>
-      <Footer />
     </div>
   )
 }
