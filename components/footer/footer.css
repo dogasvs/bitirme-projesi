@@ -8,7 +8,7 @@
 .footer a {
   text-decoration: none;
   color: #d7d4bf;
-  transition: opacity .3s ease;
+  transition: opacity .1s ease;
 }
 
 .footer a:hover {

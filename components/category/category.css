@@ -1,0 +1,21 @@
+.categoryContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 40px;
+}
+
+.categories {
+  display: flex;
+  align-items: center;  
+  margin-top: 20px;
+}
+
+.categories p {
+  text-align: center;
+}
+
+.categoryItem {
+  cursor: pointer;
+}
