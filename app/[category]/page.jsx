@@ -1,4 +1,5 @@
 "use server"
+import { AddToCartButton } from "@/components/add-to-cart";
 import { createClient } from "@/utils/supabase/server";
 
 export default async function GetProductsCategories({params}) {
@@ -27,6 +28,7 @@ export default async function GetProductsCategories({params}) {
           <img src={product.image_url} alt={product.name} />
           <h3>{product.name}</h3>
           <p>Price: ${product.price}</p>
+          <AddToCartButton productId={product.id} />
         </div>
       ))}
     </div>

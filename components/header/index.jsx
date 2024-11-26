@@ -15,7 +15,9 @@ export default function Header() {
       <div className="profile">
         <SearchSvg />
         <DropdownUser />
-        <AlisverisSepetiSvg />
+        <Link href={'/cart-detail'}>
+          <AlisverisSepetiSvg />
+        </Link>
       </div>
     </div>
   )
