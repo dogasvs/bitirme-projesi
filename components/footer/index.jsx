@@ -14,7 +14,7 @@ export default function Footer() {
     <div className="footer">
       <div className="footerBrand">
         <div className="footerLogo">
-          <Image src="/images/logo.png" alt="Gleamify Logo" width={50} height={50} />
+          <Image src="/images/logo.png" alt="Gleamify Logo" width={50} height={50} priority />
           <h1>Gleamify</h1>
         </div>
         <p>Gleamify, takının zarafetini hayatınıza taşır. <br /> Her zevke uygun benzersiz takılarımızla,kendinizi ve sevdiklerinizi şımartın.</p>

@@ -13,12 +13,12 @@ export default async function Stores() {
     <div className="storesContainer">
       {data?.map((x, i) => (
          <Link href={`/store/${x.slug}`} key={i}>
-        <div className="card">
+        <div className="card" key={x.id}>
           {x.store_img && 
           <Image src={x.store_img} alt={x.name} width={300} height={200} className="storeImage"  /> }
           <div className="cardInfo">
-            <h4> {x.name} </h4>
-            <p>{x.description}</p>
+            <h1> {x.name} </h1>
+            <h3>{x.description}</h3>
           </div>
         </div>
          </Link>

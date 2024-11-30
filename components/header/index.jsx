@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <div className="headerContainer">
       <div className="headerBrand">
-        <Image src="/images/logo.png" alt="Gleamify Logo" width={50} height={50} />
+        <Image src="/images/logo.png" alt="Gleamify Logo" width={50} height={50} priority />
         <Link href={"/"}>  <h1>Gleamify</h1> </Link>
       </div>
       <div className="profile">
