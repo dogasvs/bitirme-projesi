@@ -17,9 +17,11 @@ export default async function GetProductsCategories({params}) {
     .select("*")
     .eq('category_id', data?.id);
 
+    console.log(category);
+
   return (
-    <div>
-    <h1>{category.toUpperCase()}</h1>
+    <div className="categoryListContainer">
+    <h1>{data.name.toUpperCase()}</h1>
     <div className="products-grid">
       {products?.map((product) => (
         <div key={product.id} className="product-card">
