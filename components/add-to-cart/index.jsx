@@ -8,10 +8,17 @@ export function AddToCartButton({ productId }) {
     const { data: { user }, error: userError } = await supabase.auth.getUser();
     const userId = user.id;
 
+    const { data: product, error: productError } = await supabase
+    .from("products")
+    .select("price")
+    .eq("id", productId)
+    .eq("user_id", userId)
+    .single(); 
+
     const { error } = await supabase
-      .from("cart")
+      .from("cart") 
       .insert([
-      { user_id: userId, product_id: productId, quantity: 1 },]);
+      { user_id: userId, product_id: productId, quantity: 1, price: product.price  },]);
   };
 
   return <button onClick={addToCart}>Sepete Ekle</button>;

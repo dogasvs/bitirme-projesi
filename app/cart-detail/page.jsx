@@ -1,4 +1,6 @@
+import { DeleteToCartButton } from "@/components/delete-product";
 import { createClient } from "@/utils/supabase/server"
+import Link from "next/link";
 
 export default async function CartDetail() {
   const supabase = await createClient();
@@ -19,8 +21,12 @@ export default async function CartDetail() {
           <img src={product.image_url} alt={product.name} />
           <h3>{product.name}</h3>
           <p>Fiyat: {product.price} TL</p>
+          <DeleteToCartButton productId={product.id} />
         </div>
       ))}
+      <Link href="/checkout">
+        <button>Sepeti Onayla</button>
+      </Link>
     </div>
   )
 }

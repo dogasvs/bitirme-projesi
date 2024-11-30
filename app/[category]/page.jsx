@@ -1,12 +1,12 @@
 "use server"
 import { AddToCartButton } from "@/components/add-to-cart";
 import { createClient } from "@/utils/supabase/server";
+import "./category.css"
 
 export default async function GetProductsCategories({params}) {
   const { category } = params;
   const supabase = await createClient();
 
-  
   const { data } = await supabase
   .from("categories")
   .select("*")
@@ -16,8 +16,6 @@ export default async function GetProductsCategories({params}) {
     .from("products")
     .select("*")
     .eq('category_id', data?.id);
-
-    console.log("aaa",products);
 
   return (
     <div>

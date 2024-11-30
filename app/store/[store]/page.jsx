@@ -1,5 +1,6 @@
 import { AddToCartButton } from "@/components/add-to-cart";
 import { createClient } from "@/utils/supabase/server";
+import Link from "next/link";
 
 export default async function GetProductofStore({params}) {
   const {store} = params;
@@ -21,12 +22,14 @@ export default async function GetProductofStore({params}) {
       <h1>{store} Mağazası</h1>
       <div className="products-grid">
         {products?.map((product) => (
+         <Link href={`/products/${product.id}`}>
           <div key={product.id} className="product-card">
             <img src={product.image_url} alt={product.name} />
             <h3>{product.name}</h3>
             <p>Fiyat: {product.price} TL</p>
             <AddToCartButton productId={product.id} />
           </div>
+        </Link>
         ))}
       </div>
     </div>
