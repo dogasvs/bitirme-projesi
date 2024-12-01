@@ -1,4 +1,5 @@
 import { createClient } from "@/utils/supabase/server";
+import "./productDetail.css"
 
 export default async function ProductDetail({ params }) {
   const supabase = await createClient();
@@ -14,11 +15,15 @@ export default async function ProductDetail({ params }) {
   }
 
   return (
-    <div className="product-detail">
+    <div className="productDetail">
+      <div className="productCart">
+        <img src={product.image_url} alt={product.name} />
+      <div className="productInfo">
       <h1>{product.name}</h1>
-      <img src={product.image_url} alt={product.name} />
-      <p>{product.description}</p>
-      <p>Fiyat: {product.price} TL</p>
+        <p>{product.description}</p>
+        <p>Fiyat: {product.price} TL</p>
+      </div>
+      </div>
     </div>
   );
 }

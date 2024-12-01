@@ -1,11 +1,21 @@
+.aboutPageContainer {
+  background-image: url('/images/about.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+}
+
 .about {
   padding: 40px 100px;
 }
 
 .about p {
   margin-bottom: 16px; 
-  font-size: 18px;
-  color: #252627;
+  font-size: 20px;
+  color: #ccd4dd;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+
 }
 
 .about h1 {

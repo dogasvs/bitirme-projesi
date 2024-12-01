@@ -23,14 +23,14 @@ export default async function GetProductofStore({params}) {
       <h1>{store} Mağazası</h1>
       <div className="storeGrid">
         {products?.map((product) => (
-         <Link href={`/products/${product.id}`}>
           <div key={product.id} className="productCard">
+            <Link href={`/products/${product.id}`}>
             <img src={product.image_url} alt={product.name} />
+        </Link>
             <h3>{product.name}</h3>
             <p>Fiyat: {product.price} TL</p>
             <AddToCartButton productId={product.id} />
           </div>
-        </Link>
         ))}
       </div>
     </div>

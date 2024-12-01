@@ -9,7 +9,8 @@
   border: 1px solid #ddd;
   overflow: hidden;
   transition: transform 0.3s ease;
-  width: 100%; /* Kartın genişliğini yüzdeyle kontrol et */
+  width: 100%;
+  cursor: pointer;
   max-width: 490px;
   position: relative; 
   overflow: hidden;
@@ -50,4 +51,5 @@
 .storesContainer {
   display: grid;
   grid-template-columns: repeat(3,1fr);
+  margin-bottom: 100px;
 }

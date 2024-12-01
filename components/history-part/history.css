@@ -1,0 +1,13 @@
+.historyContainer {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  background-color: #000;
+  color: #c7cdc0;
+  margin-bottom: 60px;
+}
+
+.historyPartInfo p {
+  font-size: 20px;
+  line-height: 1.4;
+}

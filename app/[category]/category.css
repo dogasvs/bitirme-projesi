@@ -18,3 +18,25 @@
   line-height: 48px;
   font-size: 40px;
 }
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card img {
+  height: 330px;
+}
+
+.product-card button {
+  border-radius: 10px;
+  cursor: pointer;
+  border: transparent;
+  padding-block: 7px;
+  background-color: #e8e8e8;
+}
+
+.product-card button:hover {
+  background-color: #dcd9d9;
+}

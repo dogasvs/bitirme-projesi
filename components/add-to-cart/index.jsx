@@ -12,13 +12,12 @@ export function AddToCartButton({ productId }) {
     .from("products")
     .select("price")
     .eq("id", productId)
-    .eq("user_id", userId)
     .single(); 
 
     const { error } = await supabase
       .from("cart") 
       .insert([
-      { user_id: userId, product_id: productId, quantity: 1, price: product.price  },]);
+      { user_id: userId, product_id: productId, quantity: 1, price: product.price  }]);
   };
 
   return <button onClick={addToCart}>Sepete Ekle</button>;
