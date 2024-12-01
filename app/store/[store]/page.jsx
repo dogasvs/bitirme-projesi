@@ -3,10 +3,10 @@ import { createClient } from "@/utils/supabase/server";
 import Link from "next/link";
 import "./store.css"
 
-export default async function GetProductofStore({params}) {
-  const {store} = params;
+export default async function GetProductofStore({ params }) {
+  const { store } = params;
   const supabase = await createClient();
-  
+
   const { data: stores, error } = await supabase
     .from("stores")
     .select("*")
@@ -25,10 +25,12 @@ export default async function GetProductofStore({params}) {
         {products?.map((product) => (
           <div key={product.id} className="productCard">
             <Link href={`/products/${product.id}`}>
-            <img src={product.image_url} alt={product.name} />
-        </Link>
-            <h3>{product.name}</h3>
-            <p>Fiyat: {product.price} TL</p>
+              <img src={product.image_url} alt={product.name} />
+            </Link>
+            <div className="productInfo">
+              <h3>{product.name}</h3>
+              <p>Fiyat: {product.price} TL</p>
+            </div>
             <AddToCartButton productId={product.id} />
           </div>
         ))}

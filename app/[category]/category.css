@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.products-grid {
+.productsGrid {
   padding: 60px 100px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -27,6 +27,7 @@
 
 .product-card img {
   height: 330px;
+  margin-bottom: 16px;
 }
 
 .product-card button {
@@ -35,6 +36,8 @@
   border: transparent;
   padding-block: 7px;
   background-color: #e8e8e8;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 .product-card button:hover {

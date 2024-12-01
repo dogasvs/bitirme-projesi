@@ -22,12 +22,12 @@ export default async function GetProductsCategories({params}) {
   return (
     <div className="categoryListContainer">
     <h1>{data.name.toUpperCase()}</h1>
-    <div className="products-grid">
+    <div className="productsGrid">
       {products?.map((product) => (
         <div key={product.id} className="product-card">
           <img src={product.image_url} alt={product.name} />
           <h3>{product.name}</h3>
-          <p>Price: ${product.price}</p>
+          <p>Fiyat: {product.price} TL</p>
           <AddToCartButton productId={product.id} />
         </div>
       ))}

@@ -23,8 +23,29 @@
 .productCard {
   width: 100%;
   max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .productCard img {
   width: 100%;
+}
+
+.productCard button {
+  border-radius: 10px;
+  cursor: pointer;
+  border: transparent;
+  padding-block: 7px;
+  background-color: #e8e8e8;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.productCard button:hover {
+  background-color: #dcd9d9;
+}
+
+.productInfo {
+  margin-block: 10px;
 }
