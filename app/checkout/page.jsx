@@ -3,13 +3,14 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/utils/supabase/client";
+import "./checkout.css"
 
 export default function Checkout() {
-  const [step, setStep] = useState(1); 
-  const [address, setAddress] = useState(""); 
-  const [cardInfo, setCardInfo] = useState(""); 
-  const [cartItems, setCartItems] = useState([]); 
-  const [totalPrice, setTotalPrice] = useState(0); 
+  const [step, setStep] = useState(1);
+  const [address, setAddress] = useState("");
+  const [cardInfo, setCardInfo] = useState("");
+  const [cartItems, setCartItems] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
   const router = useRouter();
   const supabase = createClient();
 
@@ -71,7 +72,7 @@ export default function Checkout() {
       .eq("user_id", user.id);
 
     alert("Siparişiniz başarıyla onaylandı!");
-    router.push("/thank-you");
+    router.push("/thanks");
   };
 
   return (
@@ -79,34 +80,100 @@ export default function Checkout() {
       <h1>Ödeme ve Adres Bilgileri</h1>
 
       {step === 1 && (
-        <form onSubmit={(e) => e.preventDefault()}>
-          <label>
-            Adres:
-            <textarea
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-              required
-            />
-          </label>
-          <button type="button" onClick={() => setStep(2)}>İlerle</button>
-        </form>
+        <div className="checkoutContainer">
+          <form onSubmit={(e) => e.preventDefault()} className="adressForm">
+            <div className="nameRow">
+              <label>
+                Ad:
+                <input required />
+              </label>
+              <label>
+                Soyad:
+                <input required />
+              </label>
+            </div>
+            <label>
+              Telefon Numarası:
+              <input required type="tel" />
+            </label>
+            <label>
+              E-posta Adresi:
+              <input required type="email" />
+            </label>
+            <label>
+              Adres:
+              <textarea
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                required
+              />
+            </label>
+          </form>
+
+          <div className="cardTotalPrice">
+            <h1>Sipariş Toplamı</h1>
+            <hr />
+            <div className="totalPrice">
+              <p>Toplam Tutar:</p>
+              <h3>{totalPrice.toFixed(2)} TL</h3>
+            </div>
+            <button type="button" onClick={() => setStep(2)}>Ödemeye Devam Et</button>
+          </div>
+        </div>
+
       )}
 
       {step === 2 && (
-        <form onSubmit={handleOrderSubmit}>
-          <label>
-            Kart Bilgileri:
-            <input
-              type="text"
-              value={cardInfo}
-              onChange={(e) => setCardInfo(e.target.value)}
-              required
-            />
-          </label>
-          <p>Toplam Fiyat: {totalPrice} TL</p>
-          <button type="button" onClick={() => setStep(1)}>Geri</button>
-          <button type="submit">Ödemeyi Tamamla</button>
-        </form>
+        <div className="paymentContainer">
+          <form onSubmit={handleOrderSubmit} className="cartForm">
+            <label>
+              Kart Numarası:
+              <input
+                type="text"
+                value={cardInfo}
+                onChange={(e) => setCardInfo(e.target.value)}
+                placeholder="Kart numaranızı girin"
+                required
+              />
+            </label>
+            <div className="cardDetails">
+              <label>
+                Son Kullanma Tarihi:
+                <input
+                  type="text"
+                  placeholder="MM/YY"
+                  required
+                />
+              </label>
+              <label>
+                CVV:
+                <input
+                  type="text"
+                  placeholder="CVV"
+                  required
+                />
+              </label>
+            </div>
+            <label>
+              Kart Sahibinin Adı:
+              <input
+                type="text"
+                placeholder="Kart sahibinin adı"
+                required
+              />
+            </label>
+          </form>
+
+          <div className="cardTotalPrice">
+            <h1>Sipariş Özeti</h1>
+            <hr />
+            <div className="totalPrice">
+              <p>Toplam Tutar:</p>
+              <h3>{totalPrice.toFixed(2)} TL</h3>
+            </div>
+            <button type="submit" onClick={handleOrderSubmit}>Ödemeyi Tamamla</button>
+          </div>
+        </div>
       )}
     </div>
   );
