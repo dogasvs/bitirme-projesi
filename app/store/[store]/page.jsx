@@ -7,8 +7,8 @@ import LikeBtn from "@/app/like-btn/page";
 export default async function GetProductofStore({ params }) {
   const { store } = params;
   const supabase = await createClient();
-  
-  const {data: {user}, error: userError} = await supabase.auth.getUser();
+
+  const { data: { user }, error: userError } = await supabase.auth.getUser();
 
   const { data: stores, error } = await supabase
     .from("stores")
@@ -20,28 +20,28 @@ export default async function GetProductofStore({ params }) {
     .from("products")
     .select("*")
     .eq("store_id", stores.id);
-    
-    const productsWithLikes = await Promise.all(
-      products.map(async (product) => {
-        let postLike;
-        
-        if (user) {
-          const { data: productLike } = await supabase
+
+  const productsWithLikes = await Promise.all(
+    products.map(async (product) => {
+      let postLike;
+
+      if (user) {
+        const { data: productLike } = await supabase
           .from("likes")
           .select("*")
           .eq("product_id", product.id)
           .eq("user_id", user.id)
           .single();
-          
-          postLike = productLike;
-        }
-        
-        return {
-          ...product,
-          postLike,
-        };
-      })
-    );
+
+        postLike = productLike;
+      }
+
+      return {
+        ...product,
+        postLike,
+      };
+    })
+  );
 
   return (
     <div className="storeContainer">
@@ -55,7 +55,8 @@ export default async function GetProductofStore({ params }) {
               </Link>
               <div className="likeBtnContainer">
                 <LikeBtn like={product.postLike} product_id={product.id} />
-              </div>            </div>
+              </div>           
+            </div>
             <div className="productInfo">
               <h3>{product.name}</h3>
               <p>Fiyat: {product.price} TL</p>

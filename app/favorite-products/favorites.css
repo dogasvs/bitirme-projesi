@@ -1,0 +1,43 @@
+.favoritesProductContainer {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.favoriteProducts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 50px;
+  padding-block: 60px;
+}
+
+.favoriteProductCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.favoriteProductCard img {
+  width: 100%;
+  height: 330px;
+  margin-bottom: 16px;
+  object-fit: cover;
+}
+
+.favoriteProductCard .addtoCart {
+  border-radius: 10px;
+  cursor: pointer;
+  border: transparent;
+  padding-block: 7px;
+  background-color: #e8e8e8;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.favoriteProductCard .addtoCart:hover {
+  background-color: #dcd9d9;
+}
