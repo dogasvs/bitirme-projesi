@@ -13,7 +13,6 @@
 .storeGrid {
   width: 100%;
   max-width: 1000px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 60px 50px;
@@ -21,8 +20,7 @@
 }
 
 .productCard {
-  width: 100%;
-  max-width: 400px;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -30,9 +28,26 @@
 
 .productCard img {
   width: 100%;
+  object-fit: cover;
 }
 
-.productCard button {
+.image-container {
+  position: relative;
+}
+
+.productCard .likeBtnContainer {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.likeBtn {
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.productCard .addtoCart {
   border-radius: 10px;
   cursor: pointer;
   border: transparent;
@@ -42,23 +57,10 @@
   margin-top: 10px;
 }
 
-.productCard button:hover {
+.productCard .addtoCart:hover {
   background-color: #dcd9d9;
 }
 
 .productInfo {
   margin-block: 10px;
-}
-
-.image-container {
-  position: relative;
-}
-
-.like-icon {
-  position: absolute;
-  top: 10px; 
-  right: 10px;
-  width: 24px; 
-  height: 24px;
-  cursor: pointer;
 }

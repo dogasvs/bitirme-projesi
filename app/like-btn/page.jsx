@@ -19,7 +19,7 @@ export default function LikeBtn({product_id, like}) {
     <>
       <form action={action}>
         <input type="hidden" name="productId" value={product_id} />
-        <button onClick={handleLikeClick}>
+          <button onClick={handleLikeClick} className="likeBtn">
             {isLiked ? <DoluLike  /> :  <LikeSvg  />}
           </button>
       </form>

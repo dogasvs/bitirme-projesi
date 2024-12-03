@@ -21,5 +21,5 @@ export function AddToCartButton({ productId }) {
       window.location.reload();
   };
 
-  return <button onClick={addToCart}>Sepete Ekle</button>;
+  return <button className="addtoCart" onClick={addToCart}>Sepete Ekle</button>;
 }

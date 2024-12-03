@@ -53,8 +53,9 @@ export default async function GetProductofStore({ params }) {
               <Link href={`/products/${product.id}`}>
                 <img src={product.image_url} alt={product.name} />
               </Link>
-              <LikeBtn like={product.postLike} product_id={product.id} />
-            </div>
+              <div className="likeBtnContainer">
+                <LikeBtn like={product.postLike} product_id={product.id} />
+              </div>            </div>
             <div className="productInfo">
               <h3>{product.name}</h3>
               <p>Fiyat: {product.price} TL</p>

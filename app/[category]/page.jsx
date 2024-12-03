@@ -8,7 +8,7 @@ import LikeBtn from "../like-btn/page";
 export default async function GetProductsCategories({ params }) {
   const { category } = params;
   const supabase = await createClient();
-  const {data: {user}, error: userError} = await supabase.auth.getUser();
+  const { data: { user }, error: userError } = await supabase.auth.getUser();
 
   const { data } = await supabase
     .from("categories")
@@ -21,27 +21,27 @@ export default async function GetProductsCategories({ params }) {
     .select("*")
     .eq('category_id', data?.id);
 
-    const productsWithLikes = await Promise.all(
-      products.map(async (product) => {
-        let postLike;
-        
-        if (user) {
-          const { data: productLike } = await supabase
+  const productsWithLikes = await Promise.all(
+    products.map(async (product) => {
+      let postLike;
+
+      if (user) {
+        const { data: productLike } = await supabase
           .from("likes")
           .select("*")
           .eq("product_id", product.id)
           .eq("user_id", user.id)
           .single();
-          
-          postLike = productLike;
-        }
-        
-        return {
-          ...product,
-          postLike,
-        };
-      })
-    );
+
+        postLike = productLike;
+      }
+
+      return {
+        ...product,
+        postLike,
+      };
+    })
+  );
 
   console.log(category);
 
@@ -55,7 +55,9 @@ export default async function GetProductsCategories({ params }) {
               <Link href={`/products/${product.id}`}>
                 <img src={product.image_url} alt={product.name} />
               </Link>
+              <div className="like-btn-container">
                 <LikeBtn like={product.postLike} product_id={product.id} />
+              </div>
             </div>
             <h3>{product.name}</h3>
             <p>Fiyat: {product.price} TL</p>

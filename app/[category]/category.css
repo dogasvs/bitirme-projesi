@@ -20,9 +20,14 @@
 }
 
 .product-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
+}
+
+.image-container {
   position: relative;
 }
 
@@ -30,27 +35,31 @@
   width: 100%;
   height: 330px;
   margin-bottom: 16px;
+  object-fit: cover;
 }
 
-.like-icon {
+.product-card .like-btn-container {
   position: absolute;
-  top: 10px; 
-  right: 10px;
-  width: 24px; 
-  height: 24px;
+  top: 8px;
+  right: 8px;
+}
+
+.likeBtn {
+  background-color: transparent;
+  border: transparent;
   cursor: pointer;
 }
 
-.product-card button {
-  border-radius: 10px;
+.product-card .addtoCart {
   cursor: pointer;
   border: transparent;
   padding-block: 7px;
   background-color: #e8e8e8;
   font-weight: 600;
   margin-top: 10px;
+  border-radius: 5px;
 }
 
-.product-card button:hover {
+.product-card .addtoCart:hover {
   background-color: #dcd9d9;
 }
