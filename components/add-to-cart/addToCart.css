@@ -1,0 +1,76 @@
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: #ffffff; 
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modalContent h3 {
+  font-size: 20px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.modalActions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modalActions button:first-child {
+  background: #f3f3f3;
+  color: #333333;
+}
+
+.modalActions button:first-child:hover {
+  background: #e0e0e0;
+}
+
+.modalActions button:last-child {
+  background: #9d6d52; 
+  color: #ffffff;
+}
+
+.modalActions button:last-child:hover {
+  background: #825942;
+}
+
+.title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.title button {
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.title svg {
+  width: 20px;
+}
