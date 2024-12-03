@@ -14,7 +14,7 @@ export default async function DropdownUser() {
       <div className="dropdown-content">
         {user ? (
           <form action={SignOut} className="profileContent">
-            <Link href={"/"}>Siparişlerim</Link>
+            <Link href={"/orders"}>Siparişlerim</Link>
             <Link href={"/favorite-products"}>Favari Listem</Link>
             <button>Çıkış Yap</button>
           </form>
