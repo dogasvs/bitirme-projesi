@@ -2,7 +2,6 @@
 
 import TrashSvg from "@/svgs/trash";
 import { createClient } from "@/utils/supabase/client";
-import { revalidatePath } from "next/cache";
 
 export function DeleteToCartButton({ productId }) {
   const DeleteToProduct = async () => {
@@ -20,7 +19,7 @@ export function DeleteToCartButton({ productId }) {
         alert("Ürün silinirken hata oluştu: " + error.message);
       } else {
         alert("Ürün başarıyla sepetteki kayıtlardan silindi!");
-        revalidatePath('/cart-detail');
+        window.location.reload();
       }
   };
 

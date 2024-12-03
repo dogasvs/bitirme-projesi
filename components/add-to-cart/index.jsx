@@ -18,6 +18,7 @@ export function AddToCartButton({ productId }) {
       .from("cart") 
       .insert([
       { user_id: userId, product_id: productId, quantity: 1, price: product.price  }]);
+      window.location.reload();
   };
 
   return <button onClick={addToCart}>Sepete Ekle</button>;

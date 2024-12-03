@@ -49,3 +49,16 @@
 .productInfo {
   margin-block: 10px;
 }
+
+.image-container {
+  position: relative;
+}
+
+.like-icon {
+  position: absolute;
+  top: 10px; 
+  right: 10px;
+  width: 24px; 
+  height: 24px;
+  cursor: pointer;
+}
