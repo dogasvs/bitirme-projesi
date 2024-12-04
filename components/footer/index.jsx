@@ -40,7 +40,7 @@ export default function Footer() {
           <li><strong>Müşteri Hizmetleri</strong></li>
           <li><Link href="/faq">Sıkça Sorulan Sorular</Link></li>
           <li><Link href="/iade-degisim">İade ve Değişim Politikası</Link></li>
-          <li><Link href="/">Kargo ve Teslimat</Link></li>
+          <li><Link href="/kargo">Kargo ve Teslimat</Link></li>
           <li><Link href="/gizlilik">Gizlilik Politikası</Link></li>
         </ul>
       </div>

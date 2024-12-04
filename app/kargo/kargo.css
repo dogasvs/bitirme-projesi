@@ -1,0 +1,26 @@
+.kargoContainer {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-block: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kargoContainer ol li:not(ul li) {
+  font-weight: bold;
+}
+
+.kargoContainer p {
+  font-size: 17px;
+}
+
+.kargoContainer li {
+  color: black;
+}
+
+.kargoContainer li::marker {
+  font-weight: bold;
+  font-size: 17px;
+}
