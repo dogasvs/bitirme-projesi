@@ -8,12 +8,12 @@ export default function FAQ() {
       <div className="faq">
         <details>
           <summary>Siparişimi nasıl takip edebilirim?  <DiamondSvg /></summary>
-          <p>Siparişinizin durumu hakkında bilgi almak için hesabınıza giriş yaparak "Siparişlerim" sekmesini ziyaret edebilir veya size gönderilen <br /> takip numarasını kullanarak kargo firması üzerinden takip yapabilirsiniz.</p>
+          <p>Siparişinizin durumu hakkında bilgi almak için hesabınıza giriş yaparak &quot;Siparişlerim&quot; sekmesini ziyaret edebilir veya size gönderilen <br /> takip numarasını kullanarak kargo firması üzerinden takip yapabilirsiniz.</p>
         </details>
         <hr />
         <details>
           <summary>İade ve değişim süreci nasıl işler?  <DiamondSvg /></summary>
-          <p>Ürünlerimizi teslim aldıktan sonra 14 gün içerisinde iade veya değişim talebinde bulunabilirsiniz. <br /> Ürünlerin kullanılmamış ve orijinal ambalajında olması gerekmektedir. Daha fazla bilgi için "İade ve Değişim Politikası" sayfamızı inceleyebilirsiniz.</p>
+          <p>Ürünlerimizi teslim aldıktan sonra 14 gün içerisinde iade veya değişim talebinde bulunabilirsiniz. <br /> Ürünlerin kullanılmamış ve orijinal ambalajında olması gerekmektedir. Daha fazla bilgi için &quot;İade ve Değişim Politikası&quot; sayfamızı inceleyebilirsiniz.</p>
         </details>
         <hr />
         <details>
