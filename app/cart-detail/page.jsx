@@ -2,6 +2,7 @@ import { DeleteToCartButton } from "@/components/delete-product";
 import { createClient } from "@/utils/supabase/server"
 import Link from "next/link";
 import "./cartDetail.css"
+import { revalidatePath } from "next/cache";
 
 export default async function CartDetail() {
   const supabase = await createClient();
@@ -19,6 +20,7 @@ export default async function CartDetail() {
     const cartItem = cart.find(item => item.product_id === product.id);
     return total + product.price * (cartItem?.quantity || 1);
   }, 0);
+
 
   return (
     <div className="cartDetail">

@@ -39,7 +39,7 @@ export default function Footer() {
         <ul>
           <li><strong>Müşteri Hizmetleri</strong></li>
           <li><Link href="/faq">Sıkça Sorulan Sorular</Link></li>
-          <li><Link href="/">İade ve Değişim Politikası</Link></li>
+          <li><Link href="/iade-degisim">İade ve Değişim Politikası</Link></li>
           <li><Link href="/">Kargo ve Teslimat</Link></li>
           <li><Link href="/">Gizlilik Politikası</Link></li>
         </ul>

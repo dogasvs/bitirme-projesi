@@ -1,0 +1,23 @@
+.iadeContainer {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-block: 20px;
+}
+
+.iadeContainer ol li:not(ul li) {
+  font-weight: bold;
+}
+
+.iadeContainer p {
+  font-size: 17px;
+}
+
+.iadeContainer li {
+  color: black;
+}
+
+.iadeContainer li::marker {
+  font-weight: bold;
+  font-size: 17px;
+}
