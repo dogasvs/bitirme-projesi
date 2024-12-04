@@ -1,4 +1,4 @@
-.iadeContainer {
+.gizlilikContainer {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
@@ -8,19 +8,19 @@
   align-items: center;
 }
 
-.iadeContainer ol li:not(ul li) {
+.gizlilikContainer ol li:not(ul li) {
   font-weight: bold;
 }
 
-.iadeContainer p {
+.gizlilikContainer p {
   font-size: 17px;
 }
 
-.iadeContainer li {
+.gizlilikContainer li {
   color: black;
 }
 
-.iadeContainer li::marker {
+.gizlilikContainer li::marker {
   font-weight: bold;
   font-size: 17px;
 }
