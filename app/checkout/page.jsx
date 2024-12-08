@@ -31,7 +31,7 @@ export default function Checkout() {
       }
     };
     fetchCartItems();
-  }, []);
+  }, [supabase]);
 
   const handleOrderSubmit = async (e) => {
     e.preventDefault();

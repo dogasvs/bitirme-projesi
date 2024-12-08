@@ -1,6 +1,7 @@
 import { createClient } from "@/utils/supabase/server"
 import "./orders.css"
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function OrdersPage() {
   const supabase = await createClient();
