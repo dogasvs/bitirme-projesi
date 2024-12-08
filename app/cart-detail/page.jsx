@@ -3,6 +3,7 @@ import { createClient } from "@/utils/supabase/server"
 import Link from "next/link";
 import "./cartDetail.css"
 import { revalidatePath } from "next/cache";
+import Image from "next/image";
 
 export default async function CartDetail() {
   const supabase = await createClient();
@@ -31,7 +32,7 @@ export default async function CartDetail() {
           {products?.length > 0 ? (
             products.map((product) => (
               <div key={product.id} className="cart">
-                <img src={product.image_url} alt={product.name} />
+                <Image src={product.image_url} alt ={product.name} width={100} height={100} priority />
                 <div className="cartInfo">
                   <div className="productInfo">
                     <h3>{product.name}</h3>

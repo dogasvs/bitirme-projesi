@@ -2,6 +2,7 @@ import { createClient } from "@/utils/supabase/server"
 import "./favorites.css"
 import { AddToCartButton } from "@/components/add-to-cart";
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function FavoritesProducts() {
   const supabase = await createClient();
@@ -24,7 +25,7 @@ export default async function FavoritesProducts() {
           likes.map((x) => (
             <div key={x.product_id} className="favoriteProductCard">
               <Link href={`/products/${x.product_id}`}>
-                <img src={x.products.image_url} alt={x.products.name} />
+              <Image src={x.products.image_url} alt ={x.products.name} width={100} height={100} priority />
               </Link>
               <h3>{x.products.name}</h3>
               <p>Fiyat: {x.products.price} TL</p>

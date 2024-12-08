@@ -3,6 +3,7 @@ import { createClient } from "@/utils/supabase/server";
 import Link from "next/link";
 import "./store.css"
 import LikeBtn from "@/app/like-btn/page";
+import Image from "next/image";
 
 export default async function GetProductofStore({ params }) {
   const { store } = params;
@@ -51,7 +52,7 @@ export default async function GetProductofStore({ params }) {
           <div key={product.id} className="productCard">
             <div className="image-container">
               <Link href={`/products/${product.id}`}>
-                <img src={product.image_url} alt={product.name} />
+              <Image src={product.image_url} alt ={product.name} width={300} height={400} priority />
               </Link>
               <div className="likeBtnContainer">
                 <LikeBtn like={product.postLike} product_id={product.id} />

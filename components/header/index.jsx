@@ -13,9 +13,9 @@ export default async function Header() {
   const { data: cartItems, error: cartError } = await supabase
     .from("cart")
     .select("quantity")
-    .eq("user_id", user.id);
+    .eq("user_id", user?.id);
 
-  const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+  const cartCount = cartItems?.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <div className="headerContainer">

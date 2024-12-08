@@ -4,6 +4,7 @@ import { createClient } from "@/utils/supabase/server";
 import "./category.css"
 import Link from "next/link";
 import LikeBtn from "../like-btn/page";
+import Image from "next/image";
 
 export default async function GetProductsCategories({ params }) {
   const { category } = params;
@@ -43,8 +44,6 @@ export default async function GetProductsCategories({ params }) {
     })
   );
 
-  console.log(category);
-
   return (
     <div className="categoryListContainer">
       <h1>{data.name.toUpperCase()}</h1>
@@ -53,7 +52,7 @@ export default async function GetProductsCategories({ params }) {
           <div key={product.id} className="product-card">
             <div className="image-container">
               <Link href={`/products/${product.id}`}>
-                <img src={product.image_url} alt={product.name} />
+                <Image src={product.image_url} alt={product.name} width={100} height={100} priority />
               </Link>
               <div className="like-btn-container">
                 <LikeBtn like={product.postLike} product_id={product.id} />

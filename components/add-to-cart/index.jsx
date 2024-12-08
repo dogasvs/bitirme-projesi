@@ -43,7 +43,7 @@ export function AddToCartButton({ productId }) {
           <div className="modalContent">
             <div className="title">
               <h3>Ürün sepete eklendi!</h3>
-              <button onClick={() => setShowModal(false)}> <CloseSvg /> </button>  
+              <button className="closeBtn" onClick={() => setShowModal(false)}> <CloseSvg /> </button>  
             </div>
             <div className="modalActions">
               <button onClick={() => setShowModal(false)}>Alışverişe Devam Et</button>

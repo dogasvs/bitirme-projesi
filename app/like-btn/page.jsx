@@ -13,8 +13,6 @@ export default function LikeBtn({product_id, like}) {
     setIsLiked(!isLiked); 
   };
 
-  console.log("like",isLiked);
-
   return (
     <>
       <form action={action}>

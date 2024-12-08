@@ -1,6 +1,7 @@
 import { createClient } from "@/utils/supabase/server";
 import "./productDetail.css"
 import { AddToCartButton } from "@/components/add-to-cart";
+import Image from "next/image";
 
 export default async function ProductDetail({ params }) {
   const supabase = await createClient();
@@ -18,13 +19,15 @@ export default async function ProductDetail({ params }) {
   return (
     <div className="productDetail">
       <div className="productCart">
-        <img src={product.image_url} alt={product.name} />
+        <Image src={product.image_url} alt ={product.name} width={300} height={600} priority />
         <div className="productInfo">
-          <h1>{product.name}</h1>
-          <p>{product.description}</p>
-          <p>Fiyat: {product.price} TL</p>
+          <div className="productDetailDescrip">
+            <h1>{product.name}</h1>
+            <p>{product.description}</p>
+            <p>Fiyat: <span> {product.price} TL </span> </p>
+          </div>
           <div className="productAdd">
-            <AddToCartButton />
+            <AddToCartButton productId={product.id} />
           </div>
         </div>
       </div>

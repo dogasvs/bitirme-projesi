@@ -19,7 +19,7 @@ export default async function OrdersPage() {
       data.map((x) => (
         <div key={x.order_id} className="ordersProductCard">
           <Link href={`/products/${x.product_id}`}>
-            <img src={x.products.image_url} alt={x.products.name} />
+          <Image src={x.products.image_url} alt ={x.products.name} width={100} height={100} priority />
           </Link>
           <div className="ordersPrice">
             <h3>{x.products.name}</h3>
