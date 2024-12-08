@@ -4,6 +4,7 @@ import Link from "next/link";
 import "./store.css"
 import LikeBtn from "@/app/like-btn/page";
 import Image from "next/image";
+import ErrorStore from "@/components/store-error";
 
 export default async function GetProductofStore({ params }) {
   const { store } = params;
@@ -47,25 +48,33 @@ export default async function GetProductofStore({ params }) {
   return (
     <div className="storeContainer">
       <h1>{store} Mağazası</h1>
-      <div className="storeGrid">
-        {productsWithLikes.map((product) => (
-          <div key={product.id} className="productCard">
-            <div className="image-container">
-              <Link href={`/products/${product.id}`}>
-              <Image src={product.image_url} alt ={product.name} width={300} height={400} priority />
-              </Link>
-              <div className="likeBtnContainer">
-                <LikeBtn like={product.postLike} product_id={product.id} />
-              </div>           
+      
+      {/* Ürün yoksa hata mesajı */}
+      {productsWithLikes.length === 0 ? (
+        <div className="errorContainer">
+          <ErrorStore store={store} />
+        </div>
+      ) : (
+        <div className="storeGrid">
+          {productsWithLikes.map((product) => (
+            <div key={product.id} className="productCard">
+              <div className="image-container">
+                <Link href={`/products/${product.id}`}>
+                  <Image src={product.image_url} alt={product.name} width={300} height={400} priority />
+                </Link>
+                <div className="likeBtnContainer">
+                  <LikeBtn like={product.postLike} product_id={product.id} />
+                </div>
+              </div>
+              <div className="productInfo">
+                <h3>{product.name}</h3>
+                <p>Fiyat: {product.price} TL</p>
+              </div>
+              <AddToCartButton productId={product.id} />
             </div>
-            <div className="productInfo">
-              <h3>{product.name}</h3>
-              <p>Fiyat: {product.price} TL</p>
-            </div>
-            <AddToCartButton productId={product.id} />
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   )
 }

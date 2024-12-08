@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import { createClient } from "@/utils/supabase/client";
 import "./checkout.css"
 
@@ -23,7 +23,7 @@ export default function Checkout() {
         .select("*")
         .eq("user_id", user.id);
       if (error) {
-        console.log("Sepet verileri alınırken hata oluştu:", error.message);
+        redirect("/error")
       } else {
         setCartItems(cart);
         const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);

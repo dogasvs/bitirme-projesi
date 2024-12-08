@@ -1,0 +1,12 @@
+.storeError {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  margin-bottom: 70px;
+}
+
+.storeError h3 {
+  font-size: 20px;
+  text-transform: capitalize;
+}
