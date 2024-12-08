@@ -2,7 +2,6 @@ import { DeleteToCartButton } from "@/components/delete-product";
 import { createClient } from "@/utils/supabase/server"
 import Link from "next/link";
 import "./cartDetail.css"
-import { revalidatePath } from "next/cache";
 import Image from "next/image";
 
 export default async function CartDetail() {

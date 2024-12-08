@@ -4,6 +4,7 @@ import CloseSvg from "@/svgs/close";
 import TrashSvg from "@/svgs/trash";
 import { createClient } from "@/utils/supabase/client";
 import { useState } from "react";
+import "../add-to-cart/addToCart.css"
 
 export function DeleteToCartButton({ productId }) {
   const [showModal, setShowModal] = useState(false);
