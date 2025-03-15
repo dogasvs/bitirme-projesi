@@ -24,3 +24,10 @@
   font-weight: bold;
   font-size: 17px;
 }
+
+@media(width <= 430px) {
+  
+  .gizlilikContainer {
+    padding-inline: 40px;
+  }
+}

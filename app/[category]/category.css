@@ -63,3 +63,10 @@
 .product-card .addtoCart:hover {
   background-color: #dcd9d9;
 }
+
+@media(width <= 430px) {
+  .productsGrid {
+    padding: 30px 39px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

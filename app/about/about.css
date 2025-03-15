@@ -15,9 +15,18 @@
   color: #ccd4dd;
   font-weight: bold;
   letter-spacing: 0.5px;
-
 }
 
 .about h1 {
   margin-bottom: 16px; 
+}
+
+@media(width <= 430px) {
+  .aboutPageContainer {
+    height: unset;
+  }
+
+  .about {
+    padding: 46px 15px;
+  }
 }

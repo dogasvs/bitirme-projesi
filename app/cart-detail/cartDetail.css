@@ -86,3 +86,14 @@
   background-color: transparent;
   cursor: pointer;
 }
+
+@media(width <= 430px) {
+  .cartContent {
+    display: block;
+  }
+
+  .cart img {
+    width: 100px;
+    height: 100px;
+  }
+}

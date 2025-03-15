@@ -105,3 +105,25 @@ input, textarea {
   align-items: center;
   justify-content: space-between;
 }
+
+@media(width <= 430px) {
+  .checkoutContainer {
+    display: block;
+  }
+
+  .checkoutPage h1 {
+    margin-inline: 40px;
+  }
+
+  .adressForm {
+    padding-inline: 25px;
+  }
+
+  .paymentContainer {
+    display: block;
+  }
+
+  .cartForm {
+    padding-inline: 25px;
+  }
+}

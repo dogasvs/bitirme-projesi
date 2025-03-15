@@ -11,3 +11,23 @@
   font-size: 20px;
   line-height: 1.4;
 }
+
+@media(width <= 768px) {
+  .historyContainer {
+    gap: 20px;
+  }
+
+  .historyContainer img {
+    height: 400px;
+  }
+}
+
+@media(width <= 430px) {
+  .historyContainer {
+    flex-direction: column;
+  }
+
+  .historyPartInfo {
+    padding: 20px;
+  }
+}

@@ -11,3 +11,15 @@
   padding: 200px 50px;
   color: #efeddc;
 }
+
+@media(width <= 430px) {
+  .startShopping h3 {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 375px) {
+  .startShopping h3 {
+      font-size: 36px;
+  }
+}

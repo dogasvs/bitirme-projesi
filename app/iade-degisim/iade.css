@@ -24,3 +24,9 @@
   font-weight: bold;
   font-size: 17px;
 }
+
+@media(width <= 430px) {
+  .iadeContainer {
+    padding-inline: 40px;
+  }
+}

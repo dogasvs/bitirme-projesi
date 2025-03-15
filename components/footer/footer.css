@@ -3,6 +3,9 @@
   margin-bottom: 12px;
   font-size: 18px;
   font-weight: 700;
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
 }
 
 .footer a {
@@ -33,6 +36,7 @@
 .footerBrand {
   display: flex;
   flex-direction: column;
+  max-width: 400px;
 }
 
 .footerBrand p {
@@ -65,4 +69,35 @@
 }
 .socialMedia svg:hover {
   opacity: .5;
+}
+
+@media(width <= 768px) {
+  .footer {
+    padding: 30px;
+  }
+
+  .footer li {
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+
+  .footerBrand {
+    max-width: 180px;
+  }
+
+  .footerLogo {
+    margin-bottom: 0px;
+  }
+}
+
+@media(width <= 430px) {
+  .footerBrand {
+    margin-left: 40px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
 }

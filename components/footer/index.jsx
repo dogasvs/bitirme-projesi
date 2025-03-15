@@ -44,7 +44,7 @@ export default function Footer() {
           <li><Link href="/gizlilik">Gizlilik Politikası</Link></li>
         </ul>
       </div>
-      <div className="ıtemm">
+      <div className="ıtem">
         <ul>
           <li> <strong> İletişim</strong> </li>
           <li> <LocationSvg /> Wisconsin Ave, Suite 700

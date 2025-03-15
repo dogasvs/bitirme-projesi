@@ -26,9 +26,19 @@
 .categoryItem:hover {
   transform: translateY(-10px);
 }
-/* 
+
 @media(width <= 768px) {
-    .categoryItem img {
-    
-    }
-} */
+  .categories {
+    padding-inline: 10px;
+  }
+
+  .categoryItem img {
+    height: 200px;
+  }
+}
+
+@media(width <= 430px) {
+  .categories {
+    flex-direction: column;
+  }
+}

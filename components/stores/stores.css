@@ -53,3 +53,23 @@
   grid-template-columns: repeat(3,1fr);
   margin-bottom: 100px;
 }
+
+@media(width <= 768px) {
+  .storesContainer {
+    margin-bottom: 50px;
+  }
+
+  .storeImage {
+    height: 400px;
+  }
+}
+
+@media(width <= 430px) {
+  .storesContainer {
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .storeImage {
+    height: 600px;
+  }
+}
