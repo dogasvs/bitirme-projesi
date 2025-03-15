@@ -32,6 +32,11 @@ export function AddToCartButton({ productId }) {
       }
   };
 
+  const keepShopping = () => {
+    setShowModal(false)
+    window.location.reload();
+  }
+
   return (
     <>
       <button className="addtoCart" onClick={addToCart}>
@@ -46,7 +51,7 @@ export function AddToCartButton({ productId }) {
               <button className="closeBtn" onClick={() => setShowModal(false)}> <CloseSvg /> </button>  
             </div>
             <div className="modalActions">
-              <button onClick={() => setShowModal(false)}>Alışverişe Devam Et</button>
+              <button onClick={keepShopping}>Alışverişe Devam Et</button>
               <Link href="/cart-detail">
                 <button>Sepete Git</button>
               </Link>

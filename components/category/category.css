@@ -26,3 +26,9 @@
 .categoryItem:hover {
   transform: translateY(-10px);
 }
+
+@media(width <= 768px) {
+    .categoryItem img {
+    
+    }
+}

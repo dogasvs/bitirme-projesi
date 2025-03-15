@@ -1,0 +1,42 @@
+.thanks {
+  text-align: center;
+  max-width: 1000px;
+  width: 700px;
+  margin: 50px auto;
+}
+
+.thanks h1 {
+  font-size: 32px;
+  color: #2d2d2d; 
+  margin-bottom: 20px;
+}
+
+.thanks h2 {
+  font-size: 20px;
+  color: #5c5c5c; 
+  margin-bottom: 20px;
+}
+
+.thanks h2 a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.thanks h2 a:hover {
+  text-decoration: underline; 
+}
+
+.thanks p {
+  font-size: 18px;
+  color: #333; 
+  margin: 10px 0;
+}
+
+.thanks strong {
+  font-weight: bold;
+  color: #000;
+}
+
+.thanks img {
+  margin: 0 auto;
+}

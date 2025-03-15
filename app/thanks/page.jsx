@@ -1,5 +1,7 @@
 import { createClient } from "@/utils/supabase/server"
 import "./thanks.css"
+import Link from "next/link";
+import Image from "next/image";
 
 export default async function ThanksforOrder() {
   const supabase = await createClient();
@@ -26,7 +28,7 @@ export default async function ThanksforOrder() {
   return (
     <div className="thanks">
       <h1>Siparişiniz Tamamlandı!</h1>
-      <h2>Sipariş Detayları</h2>
+      <h2> <Link href={'/orders'}>Siparişlerim </Link> kısmından sipariş detayını inceleyebilirsiniz</h2>
       <p>
         Sipariş Numarası: <strong>{order.id}</strong>
       </p>
@@ -43,6 +45,7 @@ export default async function ThanksforOrder() {
           );
         })}
       </ul>
+      <Image src={"/images/ringError.png"} alt="ring" width={250} height={250} priority />
     </div>
   )
 }
